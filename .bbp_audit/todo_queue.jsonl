@@ -1,0 +1,2 @@
+{"id":"Q-2026-04-18-001","priority":1,"task":"Build an isolated test that opens N validator-proof substreams quickly to measure spawned task count and disconnect timing.","depends_on":["H-2026-04-18-001"]}
+{"id":"Q-2026-04-18-002","priority":2,"task":"Review libp2p_stream behaviour/default limits to confirm whether inbound stream flooding is globally bounded in this stack.","depends_on":["H-2026-04-18-001"]}

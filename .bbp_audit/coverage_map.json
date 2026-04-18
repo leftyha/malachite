@@ -1,0 +1,31 @@
+{
+  "updated_at": "2026-04-18T00:00:00Z",
+  "attack_surface": {
+    "p2p_protocol_handlers": [
+      "network::validator_proof::protocol::accept_incoming_streams",
+      "network::validator_proof::protocol::recv_proof",
+      "network::validator_proof::protocol::send_proof",
+      "engine::network::Msg::NewEvent(Event::ValidatorProofReceived)",
+      "engine::consensus::NetworkEvent::ValidatorProofReceived"
+    ],
+    "consensus_message_ingress": [
+      "engine::network::Msg::NewEvent(Event::ConsensusMessage)",
+      "network::lib::CtrlMsg::ValidatorProofVerified"
+    ],
+    "ci_cd": [
+      ".github/workflows/pr.yml (pull_request_target)",
+      ".github/workflows/publish.yml",
+      ".github/workflows/todo-tracking.yml"
+    ],
+    "deserialization_boundaries": [
+      "engine codec decode for ValidatorProof",
+      "unsigned-varint framed read in validator_proof codec"
+    ]
+  },
+  "coverage_status": {
+    "validator_proof_flow": "reviewed",
+    "signature_verification_path": "reviewed",
+    "ci_pull_request_target_usage": "reviewed",
+    "http_rpc_routes": "not_present_in_reviewed_scope"
+  }
+}
