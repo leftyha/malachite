@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-04-18T00:00:00Z",
+  "commit": "9109e96e4547c1f08f18105309d89837f856a6aa",
+  "branch": "work",
+  "default_branch_inferred": "main",
+  "languages": ["Rust", "Quint", "HCL", "YAML", "Markdown"],
+  "frameworks_or_protocols": ["libp2p", "tokio", "ractor", "GitHub Actions"],
+  "package_managers": ["cargo"],
+  "dependency_manifests": [
+    "code/Cargo.toml",
+    "code/examples/channel/Cargo.toml",
+    "code/crates/*/Cargo.toml"
+  ],
+  "infra_files": [
+    "terraform/main.tf",
+    ".github/workflows/*.yml"
+  ],
+  "network_entrypoints": [
+    "code/crates/network/src/lib.rs",
+    "code/crates/network/src/behaviour.rs",
+    "code/crates/network/src/validator_proof/*.rs",
+    "code/crates/engine/src/network.rs"
+  ],
+  "auth_related_modules": [
+    "code/crates/signing/src/lib.rs",
+    "code/crates/network/src/validator_proof/*.rs",
+    "code/crates/engine/src/consensus.rs"
+  ],
+  "hotspot_hashes": {
+    "code/crates/network/src/validator_proof/behaviour.rs": "92078c57386eb8183b51789685a330a6e5b65e40af593988ee76241aeab33964",
+    "code/crates/network/src/validator_proof/codec.rs": "bc374f8a56632a873de77b0d0033cc331ad48d0d40a9d244497495c51379eb94",
+    "code/crates/engine/src/network.rs": "892e4e9e205c5cac0df9b409e93ba044ff860af4a41554d84999bda775677766",
+    "code/crates/engine/src/consensus.rs": "f1c79cfe2b45db29d49f6784300fd111b8aede88ec709cfc050cadd815903bee",
+    ".github/workflows/pr.yml": "2e6c8f9ba82125375171f20f92636fbd940229eb695a434b5d50d9cbdb152731"
+  }
+}
